@@ -1,0 +1,649 @@
+{
+  "title": "Purchase Order Detail",
+  "icon": null,
+  "breadcrumb": [
+    {
+      "label": "Document",
+      "class":  "breadcrumb-item"
+    },
+    {
+      "label": "Purchase Order",
+      "href": "/document/purchaseOrder",
+      "class":  "breadcrumb-item"
+    },
+    {
+      "label": "Purchase Order Detail",
+      "class":  "breadcrumb-item active"
+    }
+  ],
+  "topAction": [
+    {
+      "label": "Export PDF",
+      "buttonColor": "outline-primary",
+      "icon": "<i class=\"far fa-file-pdf mr-2 text-danger\"></i>",
+      "onClick": "exportFile",
+      "actionApi": "/p2p/api/v1/export/podetail/pdf",
+      "actionMethod" : "post",
+      "actionParams" : {
+        "poNo" : "poDetail.quoteNo"
+      }
+    }
+  ],
+  "footerAction" : [
+    {
+      "type": "button",
+      "label": "Approve",
+      "action": "action.approve",
+      "class" : "btn-primary mx-2",
+      "roles" : {
+        "P2000" : ["APPROVE_GR_APPROVE_REJECT"]
+      }
+    },{
+      "type": "button",
+      "label": "Reject",
+      "action": "action.reject",
+      "class" : "btn-warning mx-2",
+      "roles" : {
+        "P2000" : ["APPROVE_GR_APPROVE_REJECT"]
+      }
+    },{
+      "type": "button",
+      "label": "Back",
+      "action": "action.back",
+      "class" : "btn-outline-primary mx-2"
+    }
+  ],
+  "contents": [
+    {
+      "items": [
+        {
+          "size": 14,
+          "title": "Buyer",
+          "thumbnail": {
+            "dataKey": "buyerDetail.buyerLogo"
+          },
+          "items": [
+            {
+              "component": "text",
+              "dataKey": "buyerDetail.buyerCompNameTH",
+              "class": "text-dark"
+            },
+            {
+              "component": "text",
+              "dataKey": "buyerDetail.buyerAddress",
+              "class": "text-dark"
+            },
+            {
+              "component": "textcol",
+              "class": "text-dark",
+              "items": [
+                {
+                  "label": "Tel : ",
+                  "dataKey": "buyerDetail.buyerContactTel"
+                },
+                {
+                  "label": "Email : ",
+                  "dataKey": "buyerDetail.buyerContactEmail"
+                }
+              ]
+            },
+            {
+              "component": "text",
+              "label": "เลขประจำตัวผู้เสียภาษี ",
+              "dataKey": "buyerDetail.buyerTaxId",
+              "class": "text-dark"
+            }
+          ]
+        },
+        {
+          "size": 10,
+          "align": "justify-content-end",
+          "items": [
+            {
+              "component": "text",
+              "label": "Quote No. : ",
+              "dataKey": "poDetail.quoteNo",
+              "class": "header-quote mt-10 font-weight-bolder text-right"
+            },
+            {
+              "component": "text",
+              "label": "Entry Date : ",
+              "dataKey": "poDetail.entryDate",
+              "class": "text-dark text-right text-right"
+            },
+            {
+              "component": "text",
+              "label": "Credit Approval Date : ",
+              "dataKey": "poDetail.creditApprovalDate",
+              "class": "text-dark text-right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Dealer",
+          "thumbnail": {
+            "dataKey": "supplierDetail.supplierLogo"
+          },
+          "items": [
+            {
+              "component": "text",
+              "dataKey": "supplierDetail.supplierCompNameTH",
+              "class": "text-dark"
+            },
+            {
+              "component": "text",
+              "dataKey": "supplierDetail.supplierAddress",
+              "class": "text-dark"
+            },
+            {
+              "component": "text",
+              "class": "text-dark",
+              "items": [
+                {
+                  "label": "Tel : ",
+                  "dataKey": "supplierDetail.supplierContactTel"
+                },
+                {
+                  "label": "Email : ",
+                  "dataKey": "supplierDetail.supplierContactEmail"
+                }
+              ]
+            },
+            {
+              "component": "text",
+              "label": "เลขประจำตัวผู้เสียภาษี ",
+              "dataKey": "supplierDetail.supplierTaxId",
+              "class": "text-dark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "line",
+              "size": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Customer Details",
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "description",
+              "column": 2,
+              "class": "text-dark",
+              "labelWidth": "200px",
+              "items": [
+                [
+                  {
+                    "size": 12,
+                    "label": "Customer Name",
+                    "dataKey": "customerDetail.customerName"
+                  },
+                  {
+                    "size": 12,
+                    "label": "AO Name",
+                    "dataKey": "customerDetail.aoName"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Financial Details",
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "description",
+              "column": 2,
+              "class": "text-dark",
+              "labelWidth": "200px",
+              "items": [
+                [
+                  {
+                    "dataClass": "d-inline-block w-100 text-right",
+                    "label": "รุ่นรถ",
+                    "dataKey": "financialDetail.itemDesc"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ยอดจัดไฟแนนซ์",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "financingAmount",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ราคารถ",
+                    "dataKey": "financialDetail.itemUnitPrice",
+                    "format": "currency",
+                    "unit": "บาท"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "อัตราดอกเบี้ย",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "interestRate",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "%"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "เงินดาวน์",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "downPayment",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ระยะเวลา",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "installmentPeriod",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "text",
+                    "unit": "งวด"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "Credit care",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "creditCare",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท",
+                    "remark": {
+                      "dataKey": "financialDetail.additionalDetail",
+                      "dataFilter": "creditCareOptions",
+                      "dataFilterKey": "key",
+                      "dataFilterValue": "value"
+                    }
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ค่างวด",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "installmentAmount",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "RV",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "rvAmount",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "การชำระต่องวด",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "installmentTiming",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "text"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ค่าธรรมเนียมสัญญา",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "contractHandlingFee",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท",
+                    "remark": {
+                      "dataKey": "financialDetail.additionalDetail",
+                      "dataFilter": "contractHandlingNett",
+                      "dataFilterKey": "key",
+                      "dataFilterValue": "value"
+                    }
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "ค่างวดล่วงหน้า",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "installmentDeduction",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "text",
+                    "unit": "งวด"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block text-right"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "จำนวนเงิน",
+                    "dataKey": "financialDetail.additionalDetail",
+                    "dataFilter": "installmentDeductionAmount",
+                    "dataFilterKey": "key",
+                    "dataFilterValue": "value",
+                    "format": "currency",
+                    "unit": "บาท"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Payment Details",
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "description",
+              "column": 2,
+              "labelCol" : 4,
+              "dataCol" : 3,
+              "class": "text-dark",
+              "labelWidth": "200px",
+              "items": [
+                [
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "label": "เงินโอนค่าตัวรถ",
+                    "dataKey": "paymentDetail.totalReceiveAmount",
+                    "format": "currency",
+                    "unit": "บาท"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "เงินสนับสนุน Exclusive Toyota Care",
+                    "dataKey": "paymentDetail.pmtdAddObject",
+                    "dataFilter": "financingAmount",
+                    "dataFilterKey": "pmdtDetailTypeDesc",
+                    "dataFilterValue": "pmdtSettlementAmount"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "ค่านายหน้ามาตรฐาน"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "เงินสนับสนุนอัตราดอกเบี้ยพิเศษ"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Incentive (On top)"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Credit Care"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Incentive (Extra)"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "ค่าธรรมเนียมสัญญา"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Incentive (Gas Coupon)"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "หักค่างวดล่วงหน้า"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Incentive (Compul Free)"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "ค่าธรรมเนียมสัญญาณ GPS"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Incentive (Term84)"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "class": "text-primary",
+                    "dataKey" : "paymentDetail.totalPaidAmount",
+                    "label": "รวม",
+                    "format" : "currency",
+                    "unit" : "บาท"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block"
+                  },
+                  {
+                    "dataClass": "d-inline-block text-right",
+                    "class": "text-warning font-weight-bolder",
+                    "dataKey" : "paymentDetail.totalPaymentAmount",
+                    "label": "Net Pay",
+                    "format" : "currency",
+                    "unit" : "บาท"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "line",
+              "size": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Additional Details",
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "description",
+              "column": 2,
+              "class": "text-dark",
+              "labelWidth": "200px",
+              "items": [
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "Engine No.",
+                    "dataKey": "grDetail.engineNo"
+                  },
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "VIN No.",
+                    "dataKey": "grDetail.vinNo"
+                  }
+                ],
+                [
+                  {
+                    "dataClass": "d-inline-block",
+                    "label": "เลขกรมธรรมม์",
+                    "dataKey": "grDetail.insurance"
+                  },
+                  {}
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "line",
+              "size": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Attachment",
+          "itemClass": "container-fluid mt-2 p-0 ",
+
+          "items": [
+            {
+              "component": "link",
+              "dataSource": "attachmentList",
+              "onClick": "downloadAttachment",
+              "linkClass": "included-bbl pr-2",
+              "actionApi": "/p2p/api/v1/download/po/attachment",
+              "actionMethod" : "post",
+              "actionParams" : {
+                "poNo" : "poDetail.quoteNo",
+                "fileName" : ":value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "line",
+              "size": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+          "title": "Action History",
+          "toggleShow": true,
+          "toggleDefault": "show",
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "table",
+              "size": 24,
+              "dataSource": "actionHistory",
+              "tableOptions": {
+                "pagination": false
+              },
+              "columns": [
+                { "title": "Action", "dataIndex": "action" },
+                { "title": "Date Time", "dataIndex": "createDatetime" },
+                { "title": "By User", "dataIndex": "createBy" },
+                { "title": "Reason", "dataIndex": "note" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "size": 24,
+
+          "itemClass": "container-fluid mt-2 p-0",
+          "items": [
+            {
+              "component": "line",
+              "class" : "line-blue mt-10",
+              "size": 24
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

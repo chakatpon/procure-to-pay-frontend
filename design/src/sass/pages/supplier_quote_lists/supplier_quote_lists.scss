@@ -1,0 +1,84 @@
+section#page-content{
+
+  #controls{
+
+      #btnExport{
+          min-height:38px;
+
+          .ant-select:not(.ant-select-customize-input){
+
+              .ant-select-selector{
+                  height:100%;
+                  border-radius:25px;
+                  -webkit-border-radius:25px;
+                  -moz-border-radius:25px;
+                  -o-border-radius:25px;
+
+                  border-color:#003399;
+
+                  .ant-select-selection-search input{
+                      height:100%;
+                  }
+
+                  .ant-select-selection-placeholder{
+                      font-size:1rem;
+                      line-height:36px;
+                      color:#003399;
+                      font-weight:bold;
+                  }
+              }
+
+              .ant-select-arrow{
+                  color:#003399;
+              }
+          }
+
+      }
+
+  }
+
+  .ant-table{
+      .ant-table-thead{
+          tr{
+              th{
+                  min-width:120px;
+                  // &:nth-child(2){
+                  //     width:160px;
+                  // }
+                  // &:nth-child(3){
+                  //     width:140px;
+                  // }
+                  // &:nth-child(4){
+                  //     width:130px;
+                  // }
+                  // &:nth-child(5){
+                  //     width:180px;
+                  // }
+                  // &:nth-child(6){
+                  //     width:120px;
+                  // }
+                  // &:nth-child(7){
+                  //     width:140px;
+                  // }
+                  // &:nth-child(8){
+                  //     width:140px;
+                  // }
+                  // &:nth-child(9){
+                  //     width:120px;
+                  // }
+              }
+          }
+      }
+  }
+
+}
+.breadcrumb{
+  background-color: #FFFFFF !important;
+  padding-left: 0px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #7E8299;
+  content: ">" !important;
+}

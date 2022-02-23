@@ -1,0 +1,478 @@
+{
+  "title": "Invoice Details",
+  "icon": null,
+  "breadcrumb": [{
+      "label": "Document"
+    },
+    {
+      "label": "Invoice",
+      "href":"/document/invoice"
+    },
+    {
+      "label": "Invoice Details"
+    }
+  ],
+  "topAction": [{
+    "label": "Export PDF",
+    "buttonColor": "outline-primary",
+    "icon": "<i class=\"far fa-file-pdf mr-2 text-danger\"></i>",
+    "onClick": "exportFile",
+    "actionApi": "/p2p/api/v1/export/podetail/pdf",
+    "actionMethod": "post",
+    "actionParams": {
+      "poNo": "poDetail.quoteNo"
+    }
+  },{
+    "buttonType" : "dropdown",
+    "buttonColor": "outline-outline-primary",
+    "showOn" : {
+      "invoice.statusCode" : ["DCS03"]
+    },
+    "roles" : {
+        "P2300" : [
+            "EDIT",
+            "CANCEL"
+        ]
+    },
+    "dropdown" : [
+      {
+        "label" : "Edit Invoice",
+        "icon": "<i class=\"fas fa-edit mr-2\"></i>",
+        "link": {
+          "href": "/approval/invoiceEdit/[linearId]/[poNo]",
+          "query": ["linearId", "poNo"]
+        },
+        "showOn" : {
+          "invoice.statusCode" : ["DCS03"]
+        },
+        "roles" : {
+            "P2300" : [
+                "EDIT"
+            ]
+        }
+      },{
+        "label" : "Cancel Invoice",
+        "icon": "<i class=\"fas fa-times-circle mr-2\"></i>",
+        "action" : "action.cancel",
+        "actionApi": "/p2p/api/v1/cancel/inv",
+        "actionMethod" : "post",
+        "actionParams" : {
+          "invItemCode": "invoiceDetail.itemCode",
+          "invNo": "invoiceDetail.invNo",
+          "invDate": "invoiceDetail.invDate"
+        },
+        "showOn" : {
+          "invoice.statusCode" : ["DCS03"]
+        },
+        "roles" : {
+            "P2300" : [
+                "EDIT"
+            ]
+        }
+      }
+
+    ]
+  }],
+  "footerAction": [
+   {
+      "type": "button",
+      "label": "Approve",
+      "action": "action.approve",
+      "class" : "btn-primary mx-2",
+      "roles" : {
+        "P2300" : ["APPROVE"]
+      },"showOn" : {
+        "invoice.statusCode" : [
+          "DCS03"
+        ]
+      }
+    },{
+      "type": "button",
+      "label": "Reject",
+      "action": "action.reject",
+      "class" : "btn-orange mx-2",
+      "roles" : {
+        "P2300" : ["REJECT"]
+        },
+        "showOn" : {
+        	"invoice.statusCode" : [
+         	 "DCS03"
+        		]
+      	}
+    },
+	{
+    "type": "button",
+    "label": "Close",
+    "action": "action.back",
+    "class": "btn-blue-transparent mx-2"
+  }],
+  "contents": [{
+      "items": [{
+        "size": 14,
+        "title": "Dealer",
+        "thumbnail": {
+          "dataKey": "supplierDetail.supplierLogo"
+        },
+        "items": [{
+            "component": "text",
+            "class": "text-dark",
+            "items": [{
+                "dataKey": "supplierDetail.supplierCompNameTH"
+              },
+              {
+                "label": "Showroom : ",
+                "dataKey": "supplierDetail.supplierBranchCode"
+              },
+              {
+                "dataKey": "supplierDetail.supplierBranchName"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "dataKey": "supplierDetail.supplierAddress",
+            "class": "text-dark"
+          },
+          {
+            "component": "text",
+            "class": "text-dark",
+            "items": [{
+                "label": "Tel : ",
+                "dataKey": "supplierDetail.supplierTelNo"
+              },
+              {
+                "label": "Email : ",
+                "dataKey": "supplierDetail.supplierEmail"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "label": "เลขประจำตัวผู้เสียภาษี ",
+            "dataKey": "supplierDetail.supplierTaxId",
+            "class": "text-dark"
+          }
+        ]
+      },{
+        "size": 10,
+        "align": "justify-content-end",
+        "items": [
+          {
+            "component": "text",
+            "label": "Invoice No. : ",
+            "dataKey": "invoice.invNo",
+            "class": "header-quote mt-10 font-weight-bolder text-right"
+          },
+          {
+            "component": "text",
+            "label": "Invoice Status : ",
+            "dataKey": "invoice.status",
+            "class": "text-dark text-right  font-weight-bolder"
+          },
+          {
+            "component": "text",
+            "label": "INV Entry Date : ",
+            "dataKey": "invoice.entryDate",
+            "class": "text-dark text-right text-right"
+          }
+        ]
+      }]
+
+    },
+    {
+      "items": [{
+          "size": 14,
+          "title": "Buyer",
+          "thumbnail": {
+            "dataKey": "buyerDetail.buyerLogo"
+          },
+          "items": [{
+              "component": "text",
+              "dataKey": "buyerDetail.buyerCompNameTH",
+              "class": "text-dark"
+            },
+            {
+              "component": "text",
+              "dataKey": "buyerDetail.buyerAddress",
+              "class": "text-dark"
+            },
+            {
+              "component": "textcol",
+              "class": "text-dark",
+              "items": [{
+                  "label": "Tel : ",
+                  "dataKey": "buyerDetail.buyerContactTel"
+                },
+                {
+                  "label": "Email : ",
+                  "dataKey": "buyerDetail.buyerContactEmail"
+                }
+              ]
+            },
+            {
+              "component": "text",
+              "label": "เลขประจำตัวผู้เสียภาษี ",
+              "dataKey": "buyerDetail.buyerTaxId",
+              "class": "text-dark"
+            }
+          ]
+        },
+        {
+          "size": 10,
+          "align": "justify-content-end",
+          "items": [{
+              "component": "text",
+              "label": "Quote No. : ",
+              "dataKey": "poDetail.quoteNo",
+              "class": "header-quote mt-10 font-weight-bolder text-right"
+            },
+            {
+              "component": "text",
+              "label": "Entry Date : ",
+              "dataKey": "poDetail.entryDate",
+              "class": "text-dark text-right text-right"
+            },
+            {
+              "component": "text",
+              "label": "Credit Approval Date : ",
+              "dataKey": "poDetail.creditApprovalDate",
+              "class": "text-dark text-right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [{
+        "size": 24,
+
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "line",
+          "size": 24
+        }]
+      }]
+    },
+    {
+      "items": [{
+        "size": 24,
+        "title": "Customer Details",
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "description",
+          "column": 2,
+          "class": "text-dark",
+          "labelWidth": "100px",
+          "items": [
+            [{
+              "size": 12,
+              "label": "Customer Name",
+              "labelSize" : "2",
+              "dataKey": "customerName"
+            }]
+          ]
+        }]
+      }]
+    },
+    {
+      "items": [{
+        "size": 24,
+        "title": "Loan Informations",
+        "itemClass": "container-fluid mt-4 p-0",
+        "items": [{
+          "custom" : true,
+          "class": "text-dark",
+          "component": "TableLoanInformation",
+          "size": 24
+        }]
+      }]
+    },
+
+    {
+      "items": [{
+        "size": 24,
+        "title": "Invoice",
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "description",
+          "column": 2,
+          "class": "text-dark invoice_bg",
+          "labelWidth": "100px",
+          "items": [
+            [{
+                "size": 12,
+                "label": "เลขที่ใบสั่งซื้อ",
+                "dataKey": "invoiceDetail.invNo"
+              },
+              {
+                "size": 12,
+                "label": "วันที่สั่งซื้อ",
+                "dataKey": "invoiceDetail.invDate"
+              }
+            ],
+            [{
+              "size": 12,
+              "label": "เลขตัวถังรถยนต์",
+              "dataKey": "invoiceDetail.itemCode"
+            }, {
+              "size": 12,
+              "dataClass": "d-inline-block text-right",
+              "label": "ยอดสั่งซื้อ",
+              "dataKey": "invoiceDetail.itemUtilPrice",
+              "format": "currency",
+              "unit": "บาท"
+            }]
+          ]
+        }]
+      }]
+    },
+    {
+      "items": [{
+        "size": 24,
+        "itemClass": "container-fluid mt-4 p-0",
+        "items": [{
+          "component": "tableAdv",
+          "tableClass" : "has-summary my-5 text-dark",
+          "size": 24,
+          "multiDatasource" : "paymentList",
+          "grayTableWhen" : {
+            "selectFlag" : false
+          },
+          "dataSource": "paymentItemDetailList",
+          "tableOptions": {
+            "pagination": false
+          },
+          "columns": [{
+              "columnName": "Asset Custom Flow",
+              "columnType": "text",
+              "columnClass": "text-dark",
+              "columnFieldName": "paymentDetailTypeDescription",
+              "columnDefault": true,
+              "columnSeq": 1
+            },
+            {
+              "columnName": "Amount (Including VAT)",
+              "columnFieldName": "amountInclVAT",
+              "columnType": "amountformat",
+              "columnClass": "text-dark",
+              "columnDefault": true,
+              "columnSeq": 2
+            },
+            {
+              "columnName": "Amount (Excluding VAT)",
+              "columnFieldName": "amountExclVAT",
+              "columnType": "amountformat",
+              "columnClass": "text-dark",
+              "columnDefault": true,
+              "columnSeq": 3
+            },
+            {
+              "columnName": "VAT",
+              "columnFieldName": "vatAmount",
+              "columnType": "amountformat",
+              "columnClass": "text-dark",
+              "columnDefault": true,
+              "columnSeq": 4
+            },
+            {
+              "columnName": "WHT",
+              "columnFieldName": "whtAmount",
+              "columnType": "amountformat",
+              "columnClass": "text-dark",
+              "columnDefault": true,
+              "columnSeq": 5
+            },
+            {
+              "columnName": "Net Amount",
+              "columnFieldName": "netAmount",
+              "columnType": "amountformat",
+              "columnClass": "text-dark",
+              "columnDefault": true,
+              "columnSeq": 6
+            }
+          ]
+        }]
+      }]
+    },
+
+    {
+      "items": [{
+        "size": 24,
+        "itemClass": "container-fluid mt-4 p-0",
+        "items": [{
+          "custom" : true,
+		  "class": "text-dark",
+          "component": "TablePurchaseInvoice",
+          "size": 24
+        }]
+      }]
+    },
+
+    {
+      "items": [{
+        "size": 24,
+        "title": "Attachment",
+        "itemClass": "container-fluid mt-2 p-0 ",
+
+        "items": [{
+          "component": "link",
+          "dataSource": "attachmentList",
+          "onClick": "downloadAttachment",
+          "linkClass": "included-bbl pr-2",
+          "actionApi": "/p2p/api/v1/download/po/attachment",
+          "actionMethod": "post",
+          "actionParams": {
+            "poNo": "poDetail.quoteNo",
+            "fileName": ":value"
+          }
+        }]
+      }]
+    },
+    {
+      "items": [{
+        "size": 24,
+
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "line",
+          "size": 24
+        }]
+      }]
+    },
+    {
+      "items": [{
+        "size": 24,
+        "title": "Action History",
+        "toggleShow": true,
+        "toggleDefault": "show",
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "table",
+		  "class": "text-dark",
+          "size": 24,
+          "dataSource": "actionHistory",
+          "tableOptions": {
+            "pagination": false
+          },
+          "columns": [{
+              "title": "Action",
+              "dataIndex": "action"
+            },
+            {
+              "title": "Date Time",
+              "dataIndex": "createDatetime"
+            },
+            {
+              "title": "By User",
+              "dataIndex": "createBy"
+            },
+            {
+              "title": "Reason",
+              "dataIndex": "note"
+            }
+          ]
+        }]
+      }]
+    }
+  ]
+}

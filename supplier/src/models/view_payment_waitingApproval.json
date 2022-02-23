@@ -1,0 +1,84 @@
+{
+    "buyer": {
+        "buyerName": "บริษัท กำจัด ปลวก",
+        "buyerTaxId": "11111",
+        "buyerBranchCode": "112",
+        "buyerBranchName": "คลองโอ่งอ่าง",
+        "buyerAddress": "คลองโอ่งอ่าง, กรุงเทพมหานคร",
+        "buyerTelNo": "02111111",
+        "buyerEmail": "Hello@email.com",
+        "buyerLogo": "data:image/png;base64,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"
+    },
+    "supplier": {
+        "supplierName": "บริษัท มันคือแป้ง จำกัด มหาชน",
+        "supplierTaxId": "22222",
+        "supplierEmail": "Hello@email.com",
+        "supplierBranchCode": "110",
+        "supplierBranchName": "Melbourne",
+        "supplierAddress": "Melbourne, Australia.",
+        "supplierTelNo": "02222222"
+    },
+    "paymentRef": "PMT-20210707-001",
+    "status": "Waiting Payment Approval",
+    "paymentDate": "2021-07-08",
+    "paymentMethod": "SMARTSAME",
+    "paymentCondition": "Same Day",
+    "beneAccountNo": "12345",
+    "invoice": [
+        {
+            "invoiceNo": "PMT-20210809-0001002",
+            "amount": 30000,
+            "paymentDetailOfInvoice": [
+                {
+                    "paymentDetailType": "C1",
+                    "paymentDetailTypeDescription": "C1 Description",
+                    "paymentDetailTypeSeqn": 1,
+                    "amountIncludingVat": 10025,
+                    "amountBeforeVat": -10000,
+                    "vatAmount": 25,
+                    "whtAmount": 0,
+                    "settlementAmount": 10000
+                },
+                {
+                    "paymentDetailType": "C2",
+                    "paymentDetailTypeDescription": "C2 Description",
+                    "paymentDetailTypeSeqn": 1,
+                    "amountIncludingVat": 20025,
+                    "amountBeforeVat": 20000,
+                    "vatAmount": 25,
+                    "whtAmount": 0,
+                    "settlementAmount": 20000
+                }
+            ]
+        },
+        {
+            "invoiceNo": "PMT-20210809-0001003",
+            "amount": 25000,
+            "paymentDetailOfInvoice": [
+                {
+                    "paymentDetailType": "C1",
+                    "paymentDetailTypeDescription": "C1 Description",
+                    "paymentDetailTypeSeqn": 1,
+                    "amountIncludingVat": 10025,
+                    "amountBeforeVat": 10000,
+                    "vatAmount": 25,
+                    "whtAmount": 0,
+                    "settlementAmount": 10000
+                },
+                {
+                    "paymentDetailType": "C2",
+                    "paymentDetailTypeDescription": "C2 Description",
+                    "paymentDetailTypeSeqn": 1,
+                    "amountIncludingVat": 20025,
+                    "amountBeforeVat": 20000,
+                    "vatAmount": 25,
+                    "whtAmount": 0,
+                    "settlementAmount": 20000
+                }
+            ]
+        }
+    ],
+    "numberOfInvoice": 2,
+    "paymentAmount": 2000000,
+    "totalVatAmount": 100
+}

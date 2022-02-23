@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supplier-front
+  namespace: app-2103191359
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supplier-front
+  template:
+    metadata:
+      labels:
+        app: supplier-front
+    spec:
+      containers:
+        - image: ddregistrydev1.azurecr.io/procure-to-pay/supplier-front:#{Build.BuildId}#
+          name: supplier-front
+          env:
+          - name: LISTEN_PORT
+            value: "8080"
+          - name: B2P_DB_SUPPLIER_HOSTNAME
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-supplier-postgres
+              key: B2P_DB_SUPPLIER_HOSTNAME
+          - name: B2P_DB_SUPPLIER_PORT
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-supplier-postgres
+              key: B2P_DB_SUPPLIER_PORT
+          - name: B2P_DB_SUPPLIER_DATABASE
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-supplier-postgres
+              key: B2P_DB_SUPPLIER_DATABASE
+          - name: B2P_DB_SUPPLIER_USER
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-supplier-postgres
+              key: B2P_DB_SUPPLIER_USER
+          - name: B2P_DB_SUPPLIER_PASSWORD
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-supplier-postgres
+              key: B2P_DB_SUPPLIER_PASSWORD
+          resources:
+            requests:
+              cpu: 75m
+              memory: 640Mi
+            limits:
+              cpu: 150m
+              memory: 768Mi
+          volumeMounts:
+            - name: 2103191359-logs-supplier-front
+              mountPath: /mnt/logs
+          ports:
+            - containerPort: 3000
+              name: http
+      volumes:
+        - name: 2103191359-logs-supplier-front
+          azureFile:
+            secretName: apps-storage-secret
+            shareName: 2103191359-logs-supplier-front
+            readOnly: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: supplier-front-service
+  namespace: app-2103191359
+spec:
+  ports:
+    - port: 3003
+      protocol: TCP
+      targetPort: 3000
+      name: http
+  selector:
+    app: supplier-front
+  type: ClusterIP

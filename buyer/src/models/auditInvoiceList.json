@@ -1,0 +1,263 @@
+{
+  "title": "Approve Invoice to Pay",
+  "icon": null,
+  "export": [{
+    "icon": "<i class=\\\"far fa-file-pdf\\\"></i>",
+    "label": "PDF",
+    "seq": 1,
+    "exportApi": "action.export-pdf"
+  }, {
+    "icon": null,
+    "label": "CSV",
+    "seq": 2,
+    "exportApi": "action.export-csv"
+  }],
+  "searchApi": null,
+  "search": [{
+    "searchKey": "invoiceNo",
+    "searchLabel": "Invoice No.",
+    "searchPlaceholder": null,
+    "searchInputType": "text",
+    "searchInputDefaultValue": null,
+    "searchInputRule": "trim|numeric",
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 1
+  }, {
+    "searchKey": "poNo",
+    "searchLabel": "Quote No.",
+    "searchPlaceholder": null,
+    "searchInputType": "text",
+    "searchInputDefaultValue": null,
+    "searchInputRule": "trim|numeric",
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 2
+  }, {
+    "searchKey": "customerName",
+    "searchLabel": "Customer Name",
+    "searchPlaceholder": null,
+    "searchInputType": "autocomplete",
+    "searchInputDefaultValue": null,
+    "searchInputRule": null,
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 3
+  }, {
+    "searchKey": "paymentDate",
+    "searchLabel": "Payment Date",
+    "searchPlaceholder": null,
+    "searchInputType": "daterangepicker",
+    "searchInputDefaultValue": null,
+    "searchInputRule": null,
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 4
+  }, {
+    "searchKey": "subplierReferanceCode",
+    "searchLabel": "Dealer's Reference code",
+    "searchPlaceholder": null,
+    "searchInputType": "text",
+    "searchInputDefaultValue": null,
+    "searchInputRule": "trim|numeric",
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 5
+  }, {
+    "searchKey": "subplierName",
+    "searchLabel": "Dealer Name",
+    "searchPlaceholder": null,
+    "searchInputType": "autocomplete",
+    "searchInputDefaultValue": null,
+    "searchInputRule": null,
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 6
+  }, {
+    "searchKey": "subplierBranchName",
+    "searchLabel": "Showroom Name",
+    "searchPlaceholder": null,
+    "searchInputType": "autocomplete",
+    "searchInputDefaultValue": null,
+    "searchInputRule": null,
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 7
+  }, {
+    "searchKey": "amount",
+    "searchLabel": "Net Amount",
+    "searchPlaceholder": null,
+    "searchInputType": "amountrange ",
+    "searchInputDefaultValue": null,
+    "searchInputRule": "amount",
+    "searchApi": "/p2p/api/v1/inquiry/invoice-to-pay/waitingApproval",
+    "searchInputSearchable": true,
+    "searchVisibility": true,
+    "searchDefaultDisplay": true,
+    "searchOptions": null,
+    "searchSeq": 8
+  }],
+  "table": {
+    "limitOptions": [10, 20, 50, 100],
+    "defaultLimit": 10,
+    "tableClass": null,
+    "columns": [{
+      "columnName": "Invoice No.",
+      "columnType": "link",
+      "columnClass": "",
+      "columnFieldName": "invoiceNo",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 1,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Quote No.",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "poNo",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 2,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Payment Date",
+      "columnType": "datepicker",
+      "columnClass": "",
+      "columnFieldName": "paymentDate",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 3,
+      "columnLink": null,
+      "columnDisplay": true ,
+      "actionApi": "/p2p/api/v1/revise/invoice-to-pay/payment-date",
+      "actionMethod" : "post",
+      "actionParams" : {
+        "linearId" : "linearId",
+        "newPaymentDate" : ":value"
+      }
+    }, {
+      "columnName": "Customer Name",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "customerName",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 4,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Dealer’s Reference Code",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "supplierReferanceCode",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 5,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Dealer Name",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "supplierName",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 6,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Invoice Due Date",
+      "columnType": "date",
+      "columnClass": "",
+      "columnFieldName": "invoiceDueDate",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 7,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Payment Method",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "paymentMethod",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 8,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Payment Condition",
+      "columnType": "text",
+      "columnClass": "",
+      "columnFieldName": "paymentCondition",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 9,
+      "columnLink": null,
+      "columnDisplay": true
+    }, {
+      "columnName": "Net Amount",
+      "columnType": "amount",
+      "columnClass": "",
+      "columnFieldName": "amount",
+      "columnSorting": true,
+      "columnIcon": null,
+      "columnDefault": true,
+      "columnSeq": 10,
+      "columnLink": null,
+      "columnDisplay": true
+    }],
+    "multipleSelect": true,
+    "tableHeaderAction": [{
+      "type": "button",
+      "label": "Approve",
+      "action": "action.approve",
+      "seq": 1,
+      "actionType": "multiSelectAction",
+      "actionUrl": null,
+      "disabled": false,
+      "visible": true
+    }, {
+      "type": "button",
+      "label": "Reject",
+      "action": "action.reject",
+      "seq": 2,
+      "actionType": "multiSelectAction",
+      "actionUrl": null,
+      "disabled": false,
+      "visible": true
+    }]
+  }
+}

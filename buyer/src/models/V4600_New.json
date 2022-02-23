@@ -1,0 +1,350 @@
+{
+    "title": "Payment Approval Detail",
+    "icon": null,
+    "breadcrumb":
+    [
+      {
+        "label": "Waiting Payment Approval"
+      },
+      {
+        "label": "Payment",
+        "href" : "/approval/payment"
+      },
+      {
+        "label": "Payment Detail"
+      }
+    ],
+	"topAction": [
+        {
+          "label": "Export PDF",
+          "buttonColor": "outline-primary",
+          "icon": "<i class=\"far fa-file-pdf mr-2 text-danger\"></i>",
+          "onClick": "exportFile",
+          "actionApi": "/p2p/api/v1/export/payment/waitingApproval/pdf/detail",
+          "actionMethod" : "post",
+          "actionParams" : {
+            "paymentRef" : "paymentRef"
+          }
+        }
+      ],
+    "footerAction" :
+    [
+      {
+        "type": "button",
+        "label": "Approve",
+        "action": "action.approve",
+        "class": "btn-primary mx-2",
+        "roles":
+        {
+          "P4600":  ["APPROVE"]
+        }
+      },
+      {
+        "type": "button",
+        "label": "Reject",
+        "action": "action.reject",
+        "class": "btn-warning mx-2",
+        "roles": {
+          "P4600": ["REJECT"]
+        }
+      },
+      {
+        "type": "button",
+        "label": "Back",
+        "action": "action.back",
+        "class" : "btn-outline-primary mx-2"
+      }
+    ],
+    "contents":
+    [
+      {
+        "items":
+        [
+          {
+            "size": 14,
+            "title": "Buyer",
+            "thumbnail":
+            {
+              "dataKey": "buyer.buyerLogo"
+            },
+            "items":
+            [
+              {
+                "component": "text",
+                "dataKey": "buyer.buyerName",
+                "class": "text-dark"
+              },
+              {
+                "component": "text",
+                "dataKey": "buyer.buyerAddress",
+                "class": "text-dark"
+              },
+              {
+                "component": "text",
+                "label": "เลขประจำตัวผู้เสียภาษี ",
+                "dataKey": "buyer.buyerTaxId",
+                "class": "text-dark"
+              }
+            ]
+          },
+          {
+            "size": 10,
+            "align": "justify-content-end",
+            "items": [
+              {
+                "component": "text",
+                "label": "Payment Reference : ",
+                "dataKey": "paymentRef",
+                "class": "header-quote mt-10 font-weight-bolder text-right"
+              },
+              {
+                "component": "text",
+                "label": "Payment Status : ",
+                "dataKey": "status",
+                "class": "header-second-quote mt-3 font-weight-bolder text-right"
+              },
+              {
+                "component": "text",
+                "label": "Payment Date : ",
+                "dataKey": "paymentDate",
+                "class": "text-dark mt-3 text-right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items":
+        [
+          {
+            "size": 24,
+            "title": "Dealer",
+            "items": [
+              {
+                "component": "text",
+                "class": "text-dark",
+                "items": [{
+                    "dataKey": "supplier.supplierName"
+                  },
+                  {
+                    "label": "Showroom : ",
+                    "dataKey": "supplier.supplierBranchCode"
+                  },
+                  {
+                    "dataKey": "supplier.supplierBranchName"
+                  }
+                ]
+              },
+              
+              {
+                "component": "text",
+                "dataKey": "supplier.supplierAddress",
+                "class": "text-dark"
+              },
+              {
+                "component": "text",
+                "label": "เลขประจำตัวผู้เสียภาษี ",
+                "dataKey": "supplier.supplierTaxId",
+                "class": "text-dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items":
+        [
+          {
+            "size": 24,
+            "title": "Payment Details"
+          }
+        ]
+      },
+      {
+        "class": "bg-lightgrey d-flex flex-wrap border-radius align-items-center pl-13 pr-13 pt-5 pb-5",
+        "items":
+        [
+          {
+            "size": 8,
+            "items":
+            [
+              {
+                "component": "text",
+                "label": "Payment Method : ",
+                "dataKey": "paymentMethod",
+                "class": "text-dark"
+              }
+            ]
+          },
+          {
+            "size": 8,
+            "align": "justify-content-center",
+            "items":
+            [
+              {
+                "component": "text",
+                "label": "Payment Condition : ",
+                "dataKey": "paymentCondition",
+                "class": "text-dark"
+              }
+            ]
+          },
+          {
+            "size": 8,
+            "align": "justify-content-end",
+            "items":
+            [
+              {
+                "component": "text",
+                "label": "Beneficiary Account Number : ",
+                "dataKey": "beneAccountNo",
+                "class": "text-dark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items":
+        [
+          {
+            "blockClass": "d-block",
+            "size": 24,
+            "items":
+            [
+              {
+                "component": "paymentExpan",
+                "dataSource": "invoice",
+                "dataLeft": {
+                  "label": "Invoice No. : ",
+                  "dataKey": "invoiceNo"
+                },
+                "dataRight": {
+                  "label": "Invoice Net Amount : ",
+                  "dataKey": "amount"
+                },
+                "item": {
+                  "columns": [
+                    {
+                      "label":"Asset Custom Flow",
+                      "class": "text-left"
+                    },
+                    {
+                      "label":"Amount (Including VAT)",
+                      "class": "text-right"
+                    },
+                    {
+                      "label":"Amount (Excluding VAT)",
+                      "class": "text-right"
+                    },
+                    {
+                      "label":"VAT",
+                      "class": "text-right"
+                    },
+                    {
+                      "label":"WHT",
+                      "class": "text-right"
+                    },
+                    {
+                      "label":"Net Amount",
+                      "class": "text-right"
+                    }
+                     ],
+                  "dataSource": "paymentDetailOfInvoice",
+				          "class": "text-right",
+                  "data":
+                  [
+                    {
+                      "dataKey": "paymentDetailTypeDescription",
+					  "class": "text-left"
+                    },
+                    {
+                      "dataKey": "amountIncludingVat",
+                      "type": "currency",
+					  "class": "text-right"
+                    },
+                    {
+                      "dataKey": "amountBeforeVat",
+                      "type": "currency",
+					  "class": "text-right"
+                    },
+                    {
+                      "dataKey": "vatAmount",
+                      "type": "currency",
+					  "class": "text-right"
+                    },
+                    {
+                      "dataKey": "whtAmount",
+                      "type": "currency",
+					  "class": "text-right"
+                    },
+                    {
+                      "dataKey": "settlementAmount",
+                      "type": "currency",
+					  "class": "text-right"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items":
+        [
+          {
+            "size": 24,
+            "align": "justify-content-end",
+            "class": "mt-10",
+            "items":
+            [
+              {
+                "component": "text",
+                "label": "Payment Summary",
+                "class": "h3 blue mb-5"
+              },
+              {
+                "class": "d-flex justify-content-between",
+                "component": "text",
+                "label": "Total Invoice of Payment",
+                "dataKey": "numberOfInvoice"
+              },
+              {
+                "class": "d-flex justify-content-between",
+                "component": "dataCurrency",
+                "label": "Total Payment Net Amount",
+                "dataKey": "paymentAmount",
+                "itemClass": "ml-16 text-right"
+              },
+              {
+                "class": "d-flex justify-content-between",
+                "component": "dataCurrency",
+                "label": "Total Vat Amount (7%)",
+                "itemClass": "ml-16 text-right",
+                "dataKey": "totalVatAmount"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "items":
+        [
+          {
+            "size": 24,
+            "itemClass": "container-fluid mt-10 p-0",
+            "items":
+            [
+              {
+                "class": "line-blue",
+                "component": "line",
+                "size": 24
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

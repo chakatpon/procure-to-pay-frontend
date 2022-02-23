@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buyer-front
+  namespace: app-2103191359
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buyer-front
+  template:
+    metadata:
+      labels:
+        app: buyer-front
+    spec:
+      containers:
+        - image: ddregistrydev1.azurecr.io/procure-to-pay/buyer-front:#{Build.BuildId}#
+          name: buyer-front
+          env:
+          - name: LISTEN_PORT
+            value: "8080"
+          - name: B2P_DB_BUYER_HOSTNAME
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-buyer-postgres
+              key: B2P_DB_BUYER_HOSTNAME
+          - name: B2P_DB_BUYER_PORT
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-buyer-postgres
+              key: B2P_DB_BUYER_PORT
+          - name: B2P_DB_BUYER_DATABASE
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-buyer-postgres
+              key: B2P_DB_BUYER_DATABASE
+          - name: B2P_DB_BUYER_USER
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-buyer-postgres
+              key: B2P_DB_BUYER_USER
+          - name: B2P_DB_BUYER_PASSWORD
+            valueFrom:
+             secretKeyRef:
+              name: dbconnection-buyer-postgres
+              key: B2P_DB_BUYER_PASSWORD
+          resources:
+            requests:
+              cpu: 75m
+              memory: 640Mi
+            limits:
+              cpu: 150m
+              memory: 768Mi
+          volumeMounts:
+            - name: 2103191359-logs-buyer-front
+              mountPath: /mnt/logs
+          ports:
+            - containerPort: 3000
+              name: http
+      volumes:
+        - name: 2103191359-logs-buyer-front
+          azureFile:
+            secretName: apps-storage-secret
+            shareName: 2103191359-logs-buyer-front
+            readOnly: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: buyer-front-service
+  namespace: app-2103191359
+spec:
+  ports:
+    - port: 3003
+      protocol: TCP
+      targetPort: 3000
+      name: http
+  selector:
+    app: buyer-front
+  type: ClusterIP

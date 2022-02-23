@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bbl-p2p-frontend-buyer
+  namespace: app-2103191359
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bbl-p2p-frontend-buyer
+  template:
+    metadata:
+      labels:
+        app: bbl-p2p-frontend-buyer
+    spec:
+      containers:
+        - image: ddregistrydev1.azurecr.io/procure-to-pay/p2p-frontend-buyer:#{Build.BuildId}#
+          name: bbl-p2p-frontend-buyer
+          env:
+          - name: APP_PORT
+            value: "3005"
+          - name: APP_DOMAIN
+            value: "127.0.0.1"
+          - name: APP_HOST
+            value: "127.0.0.1:3005"
+          resources:
+            requests:
+              cpu: 75m
+              memory: 640Mi
+            limits:
+              cpu: 150m
+              memory: 768Mi
+          volumeMounts:
+            - name: 2103191359-logs-bbl-p2p-frontend-buyer
+              mountPath: /mnt/logs
+          ports:
+            - containerPort: 3005
+              name: http
+      volumes:
+        - name: 2103191359-logs-bbl-p2p-frontend-buyer
+          azureFile:
+            secretName: apps-storage-secret
+            shareName: 2103191359-logs-bbl-p2p-frontend-buyer
+            readOnly: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bbl-p2p-frontend-buyer-service
+  namespace: app-2103191359
+spec:
+  ports:
+    - port: 3005
+      protocol: TCP
+      targetPort: 3005
+      name: http
+  selector:
+    app: bbl-p2p-frontend-buyer
+  type: ClusterIP

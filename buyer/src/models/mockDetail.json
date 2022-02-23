@@ -1,0 +1,173 @@
+{
+  "title": "Web Title Demo",
+  "icon": null,
+  "breadcrumb": [{
+      "label": "Dev Demo"
+    },
+    {
+      "label": "Link A",
+      "href" : "/dashboard"
+    },
+    {
+      "label": "Invoice Details"
+    }
+  ],
+  "topAction": [
+    {
+      "label": "Export PDF TEST",
+      "buttonColor": "outline-primary",
+      "icon": "<i class=\"far fa-file-pdf mr-2 text-danger\"></i>",
+      "onClick": "exportFile",
+      "actionApi": "/cal/to/url",
+      "actionMethod": "post",
+      "actionParams": {
+        "poNo": "poDetail.quoteNo",
+        "vinNo" : "grDetail.vinNo"
+      }
+    },{
+      "label": "Export CSV TEST",
+      "buttonColor": "outline-primary ml-2",
+      "icon": "<i class=\"far fa-file-pdf mr-2 text-danger\"></i>",
+      "onClick": "exportFile",
+      "actionApi": "/cal/to/url",
+      "actionMethod": "post",
+      "actionParams": {
+        "poNo": "poDetail.quoteNo",
+        "vinNo" : "grDetail.vinNo"
+      }
+    }
+  ],
+  "footerAction": [ {
+    "type": "button",
+    "label": "Submit",
+    "action": "action.submit",
+    "class": "btn-outline-primary mx-2",
+    "showOn" : {
+      "poDetail.status" : ["DCS03","DCS05"]
+    },
+    "hideOn" : {
+      "poDetail.status" : ["DCS03","DCS05"]
+    }
+  },{
+    "type": "button",
+    "label": "Back",
+    "action": "action.back",
+    "class": "btn-outline-primary mx-2"
+  }, {
+    "type": "button",
+    "label": "APPROVE",
+    "action": "action.alerttest",
+    "class": "btn-primary mx-2",
+    "roles" : {
+      "P2100": [
+        "APPROVE"
+      ]
+    }
+  }, {
+    "type": "button",
+    "label": "CANCEL",
+    "action": "action.alerttest",
+    "class": "btn-orange mx-2",
+    "roles" : {
+      "P2100": [
+        "CANCEL"
+      ]
+    }
+  }],
+  "contents": [
+    {
+      "items": [{
+        "size": 24,
+        "itemClass": "container-fluid mt-4 p-0",
+        "items": [{
+          "custom" : true,
+          "component": "TreeWayInforBox",
+          "size": 24
+        }]
+      }]
+    },
+    {
+      "items": [
+        {
+          "size": 12,
+          "title" : "Buyer",
+          "thumbnail": {
+            "dataKey": "buyerDetail.buyerLogo"
+          },
+          "items": [
+            {
+              "component": "text",
+              "dataKey": "buyerDetail.buyerCompNameTH",
+              "class": "text-dark"
+            },
+            {
+              "component": "text",
+              "dataKey": "buyerDetail.buyerAddress",
+              "class": "text-dark"
+            },
+            {
+              "component": "textcol",
+              "class": "text-danger",
+              "items": [{
+                  "label": "โทร : ",
+                  "dataKey": "buyerDetail.buyerContactTel"
+                },
+                {
+                  "label": "Email : ",
+                  "dataKey": "buyerDetail.buyerContactEmail"
+                },
+                {
+                  "label": "Branch : ",
+                  "dataKey": "buyerDetail.buyerBranchName"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "size": 12,
+          "title" : "Suppliier",
+          "thumbnail": {
+            "dataKey": "supplierDetail.supplierLogo"
+          }
+        }
+      ]
+    },
+
+
+    {
+      "items": [{
+        "size": 24,
+        "title": "Action History",
+        "toggleShow": true,
+        "toggleDefault": "hide",
+        "itemClass": "container-fluid mt-2 p-0",
+        "items": [{
+          "component": "table",
+          "size": 24,
+          "dataSource": "actionHistory",
+          "tableOptions": {
+            "pagination": false
+          },
+          "columns": [{
+              "title": "Action",
+              "dataIndex": "action"
+            },
+            {
+              "title": "Date Time",
+              "dataIndex": "actionDate"
+            },
+            {
+              "title": "By User",
+              "dataIndex": "actionBy"
+            },
+            {
+              "title": "Reason",
+              "dataIndex": "actionReason"
+            }
+          ]
+        }]
+      }]
+    }
+  ]
+}

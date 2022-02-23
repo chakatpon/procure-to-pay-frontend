@@ -1,0 +1,44 @@
+section#page-content #controls #btnExport {
+  min-height: 38px;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  height: 100%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-color: #003399;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search input {
+  height: 100%;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-placeholder {
+  font-size: 1rem;
+  line-height: 36px;
+  color: #003399;
+  font-weight: bold;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-arrow {
+  color: #003399;
+}
+section#page-content .ant-table .ant-table-thead tr th {
+  min-width: 120px;
+}
+.btn-auto-width {
+  width: 130px;
+  margin: 0 7px 0 7px;
+}
+.breadcrumb{
+  background-color: #FFFFFF !important;
+  padding: 0.75rem 0rem 0rem 0rem !important;
+}
+.breadcrumb .active{
+  color: #003399 !important;
+  font-weight: bold !important;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #7E8299;
+  content: ">" !important;
+}

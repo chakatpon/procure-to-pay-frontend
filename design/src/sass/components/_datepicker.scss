@@ -1,0 +1,30 @@
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  color: #ffffff !important;
+  border-color: #013399 !important;
+  background-color: #013399 !important;
+}
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
+  border: 1px solid #013399 !important;
+  padding: 4px;
+}
+.rs-picker-toolbar-right-btn-ok {
+  background-color: #013399 !important;
+}
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value, .rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+  color: #575757 !important;
+}
+.rs-picker-default:not(.rs-picker-disabled) .rs-btn:hover, .rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle:hover, .rs-picker-default:not(.rs-picker-disabled) .rs-btn.active, .rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle.active {
+  border-color: #1675e0;
+}
+.rs-picker-default:not(.rs-picker-disabled) .rs-btn:hover, .rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle:hover, .rs-picker-default:not(.rs-picker-disabled) .rs-btn.active, .rs-picker-default:not(.rs-picker-disabled) .rs-picker-toggle.active {
+
+}
+.rs-btn.rs-btn-default.rs-picker-toggle{
+  border-color: #b6b5b5 !important;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+}
+.rs-picker-date .rs-picker-toggle.rs-btn, .rs-picker-daterange .rs-picker-toggle.rs-btn {
+  padding-right: 36px !important;
+  padding-left: 15px !important;
+}

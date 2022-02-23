@@ -1,0 +1,28 @@
+//
+// Custom opacity helpers
+//
+
+// Responsive opacity
+@use "sass:math";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+		@for $opacity from 1 through 100 {
+			.opacity#{$infix}-#{$opacity} {
+				opacity: math.div($opacity, 100) !important;
+			}
+
+			.hover-opacity#{$infix}-#{$opacity} {
+				transition: $transition;
+
+				&.active,
+				&:hover {
+					transition: $transition;
+					opacity: math.div($opacity, 100) !important;
+				}
+			}
+		}
+	}
+}

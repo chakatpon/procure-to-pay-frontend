@@ -1,0 +1,254 @@
+{
+  "title": "Customer Batch Reference List",
+  "icon": null,
+  "breadcrumb": [
+    {
+      "label": "Monitoring",
+      "href": ""
+    },
+    {
+      "label": "iCash",
+      "href": ""
+    },
+    {
+      "label": "Customer Batch Reference List",
+      "href": "/monitor/iCash/customerBatchReferenceList"
+    }
+  ],
+  "export": [
+    {
+      "icon": "<span class=\"bbl-file-csv\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span><span class=\"path5\"></span><span class=\"path6\"></span><span class=\"path7\"></span><span class=\"path8\"></span><span class=\"path9\"></span><span class=\"path10\"></span></span>",
+      "label": "CSV",
+      "seq": 2,
+      "exportApi": "/p2p/api/v1/export/icashMonitoring/customerBatchReference/csv",
+      "fileName": "fileName.csv"
+    }
+  ],
+  "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+  "search": [
+    {
+      "searchKey": "buyerCode",
+      "searchLabel": "Buyer Code",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 1
+    },
+    {
+      "searchKey": "buyerName",
+      "searchLabel": "Buyer Name",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 2
+    },
+    {
+      "searchKey": "customerBatchRefrence",
+      "searchLabel": "Customer Batch Refrence",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 3
+    },
+    {
+      "searchKey": "fileDate",
+      "searchLabel": "File Date",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 4
+    },
+    {
+      "searchKey": "debitAccountNo",
+      "searchLabel": "Debit Account No.",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 5
+    },
+    {
+      "searchKey": "productService",
+      "searchLabel": "Product Service",
+      "searchPlaceholder": null,
+      "searchInputType": "select",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": [
+        {
+          "option": "ALL",
+          "value": ""
+        }
+      ],
+      "searchSeq": 6
+    },
+    {
+      "searchKey": "icashCustomerType",
+      "searchLabel": "iCash Customer Type",
+      "searchPlaceholder": null,
+      "searchInputType": "select",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": [
+        {
+          "option": "ALL",
+          "value": ""
+        }
+      ],
+      "searchSeq": 7
+    },
+    {
+      "searchKey": "processingStatus",
+      "searchLabel": "Processing Status",
+      "searchPlaceholder": null,
+      "searchInputType": "select",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "​/p2p​/api​/v1​/inquiry​/icashMonitoring​/customerBatchReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": [
+        {
+          "option": "ALL",
+          "value": ""
+        }
+      ],
+      "searchSeq": 8
+    }
+  ],
+  "table": {
+    "limitOptions": [
+      10,
+      20,
+      50
+    ],
+    "defaultLimit": 10,
+    "tableClass": "",
+    "columns": [
+      {
+        "columnName": "Buyer Code",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "buyerCode",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": true,
+        "columnSeq": 1,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Buyer Name (EN)",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "buyerNameEN",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 2,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Customer Batch Reference",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "customerBatchReference",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 3,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "File Name",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "fileName",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 4,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "File Date",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "fileDate",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 5,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Product Service",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "productService",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 6,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Processing Status",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "processingStatus",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 7,
+        "columnLink": null,
+        "columnDisplay": true
+      }
+    ],
+    "multipleSelect": false,
+    "tableHeaderAction": null
+  }
+}

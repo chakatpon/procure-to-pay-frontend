@@ -1,0 +1,176 @@
+{
+  "PF_USER_PASSWORD_EXPIRE_SOON": {
+    "url": "/changePassword"
+  },
+  "PF_USER_WAITING_APPROVAL": {
+    "url": "/profile/userDetail"
+  },
+  "PF_USER_APPROVED": {
+    "url": "/profile/userDetail"
+  },
+  "PF_USER_REJECTED": {
+    "url": "/profile/userDetail"
+  },
+  "PF_SUP_WAITING_APPROVAL": {
+    "url": "/profile/supplierApprovalDetail"
+  },
+  "PF_SUP_APPROVED": {
+    "url": "/profile/supplierDetail"
+  },
+  "PF_SUP_REJECTED": {
+    "url": "/profile/supplierApprovalDetail"
+  },
+  "PF_SUP_APPROVED_BY_SUPPLIER": {
+    "url": "/profile/supplierDetail"
+  },
+  "PF_SUP_REJECTED_BY_SUPPLIER": {
+    "url": "/profile/supplierApprovalDetail"
+  },
+  "PF_PNS_WAITING_APPROVAL": {
+    "url": "/profile/partnershipWaitingApproval"
+  },
+  "PF_PNS_APPROVED": {
+    "url": "/profile/partnershipDetail"
+  },
+  "PF_PNS_REJECTED": {
+    "url": "/profile/partnershipWaitingApproval"
+  },
+  "PF_BUYER_WAITING_APPROVAL": {
+    "url": "/profile/buyerWaitingApproval"
+  },
+  "PF_BUYER_APPROVED": {
+    "url": "/profile/buyerDetail"
+  },
+  "PF_BUYER_REJECTED": {
+    "url": "/profile/buyerWaitingApproval"
+  },
+  "PF_BUYER_APPROVED_BY_BUYER": {
+    "url": "/profile/buyerDetail"
+  },
+  "PF_BUYER_REJECTED_BY_BUYER": {
+    "url": "/profile/buyerWaitingApproval"
+  },
+  "THREE_WAY_REJECTED_BY_BUYER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "THREE_WAY_APPROVED_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]/[buyerCode]/[buyerBranchCode]/[supplierCode]/[supplierBranchCode]"
+  },
+  "PAYMENT_WAITING_BUYER_SUBMIT": {
+    "url": "/approval/invoiceDetail/[invoiceNo]/[paymentGroupId]"
+  },
+  "PAYMENT_CANCELLED_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "PAYMENT_WAITING_BUYER_APPROVAL": {
+    "url": "/approval/paymentDetail/[paymentRef]"
+  },
+  "PAYMENT_REJECTED_INV_BY_BUYER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PAYMENT_APPROVED_BY_BUYER": {
+    "url": "/monitor/paymentDetail/[paymentRef]"
+  },
+  "PAYMENT_REJECTED_PMT_BY_BUYER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PAYMENT_REGROUPED_BY_BUYER": {
+    "url": "/approval/invoiceDetail/[invoiceNo]/[paymentGroupId]"
+  },
+  "PAYMENT_RESUBMIT_BY_BUYER": {
+    "url": "/monitor/paymentDetail/[paymentRef]"
+  },
+  "WAITING_PAYMENT_SUBMIT": {
+    "url": "/approval/invoiceDetail/[invoiceNo]/[paymentGroupId]/[buyerCode]/[buyerBranchCode]/[supplierCode]/[supplierBranchCode]/[buyerTaxId]/[supplierTaxId]/[supplierVatBranchCode]"
+  },
+  "WAITING_INVOICE_SUBMIT": {
+    "url": "/approval/invoiceDetail/[invoiceNo]/[paymentGroupId]/[buyerCode]/[buyerBranchCode]/[supplierCode]/[supplierBranchCode]/[buyerTaxId]/[supplierTaxId]/[supplierVatBranchCode]"
+  },
+  "INVOICE_DEATIL": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]/[buyerCode]/[buyerBranchCode]/[supplierCode]/[supplierBranchCode]"
+  },
+  "INV_REJECTED_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_WAITING_SUPPLIER_APPROVAL": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_APPROVED_BY_SUPPLIER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_REJECTED_BY_SUPPLIER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_APPROVED_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_WAITING_BUYER_APPROVAL": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_WAITING_SUPPLIER_SUBMIT": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_WAITING_BUYER_SUBMIT": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_CANCELLED_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "INV_CANCELLED_SPLIT_PAYMENT_BY_BUYER": {
+    "url": "/document/invoiceDetail/[statusCode]/[invDate]/[invNo]/[itemCode]"
+  },
+  "PO_APPROVED_BY_BUYER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_REJECTED_BY_BUYER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_APPROVED_BY_SUPPLIER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_REJECTED_BY_SUPPLIER": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_WAITING_FOR_GR": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_WAITING_SUPPLIER_APPROVAL": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_WAITING_BUYER_APPROVAL": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "PO_WAITING_SUPPLIER_SUBMIT": {
+    "url": "/document/purchaseOrderDetail/[linearId]/[poNo]"
+  },
+  "GR_APPROVED_BY_BUYER": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "GR_REJECTED_BY_BUYER": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "GR_APPROVED_BY_SUPPLIER": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "GR_WAITING_BUYER_APPROVAL": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "GR_REJECTED_BY_SUPPLIER": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "GR_WAITING_SUPPLIER_APPROVAL": {
+    "url": "/document/goodsReceiptDetail/[linearId]/[grNo]"
+  },
+  "2W_APPROVED_BY_BUYER": {
+    "url": "/matching/2wayDetail/[matchId]/[invNo]"
+  },
+  "2W_REJECTED_BY_BUYER": {
+    "url": "/matching/2wayDetail/[matchId]/[invNo]"
+  },
+  "2W_WAITING_BUYER_APPROVAL": {
+    "url": "/matching/2wayDetail/[matchId]/[invNo]"
+  },
+  "2W_WAITING_BUYER_FORCE_MATCH": {
+    "url": "/matching/2wayDetail/[matchId]/[invNo]"
+  }
+}

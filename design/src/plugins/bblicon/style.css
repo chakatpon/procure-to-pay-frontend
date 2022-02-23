@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'bblicon';
+  src:  url('fonts/bblicon.eot?8kcpmo');
+  src:  url('fonts/bblicon.eot?8kcpmo#iefix') format('embedded-opentype'),
+    url('fonts/bblicon.ttf?8kcpmo') format('truetype'),
+    url('fonts/bblicon.woff?8kcpmo') format('woff'),
+    url('fonts/bblicon.svg?8kcpmo#bblicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bbl-"], [class*=" bbl-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bblicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bbl-file-pdf .path1:before {
+  content: "\e900";
+  color: rgb(233, 233, 224);
+}
+.bbl-file-pdf .path2:before {
+  content: "\e901";
+  margin-left: -0.767578125em;
+  color: rgb(217, 215, 202);
+}
+.bbl-file-pdf .path3:before {
+  content: "\e902";
+  margin-left: -0.767578125em;
+  color: rgb(204, 75, 76);
+}
+.bbl-file-pdf .path4:before {
+  content: "\e903";
+  margin-left: -0.767578125em;
+  color: rgb(204, 75, 76);
+}
+.bbl-file-pdf .path5:before {
+  content: "\e904";
+  margin-left: -0.767578125em;
+  color: rgb(255, 255, 255);
+}
+.bbl-file-pdf .path6:before {
+  content: "\e905";
+  margin-left: -0.767578125em;
+  color: rgb(255, 255, 255);
+}
+.bbl-file-pdf .path7:before {
+  content: "\e906";
+  margin-left: -0.767578125em;
+  color: rgb(255, 255, 255);
+}
+.bbl-file-csv .path1:before {
+  content: "\e907";
+  color: rgb(233, 233, 224);
+}
+.bbl-file-csv .path2:before {
+  content: "\e908";
+  margin-left: -0.767578125em;
+  color: rgb(217, 215, 202);
+}
+.bbl-file-csv .path3:before {
+  content: "\e909";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path4:before {
+  content: "\e90a";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path5:before {
+  content: "\e90b";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path6:before {
+  content: "\e90c";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path7:before {
+  content: "\e90d";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path8:before {
+  content: "\e90e";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path9:before {
+  content: "\e90f";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}
+.bbl-file-csv .path10:before {
+  content: "\e910";
+  margin-left: -0.767578125em;
+  color: rgb(18, 150, 95);
+}

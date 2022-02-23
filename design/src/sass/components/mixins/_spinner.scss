@@ -1,0 +1,40 @@
+//
+// Mixins
+//
+
+
+@use "sass:math";
+
+@mixin spinner-size($size) {
+	&:before {
+		width: $size;
+  		height: $size;
+  		margin-top: -(math.div($size, 2));
+  	}
+
+	&.spinner-center {
+		&:before {
+			left: 50%;
+  			margin-left: -(math.div($size, 2));
+		}
+	}
+
+	&.spinner-left {
+		&:before {
+			right: auto;
+		}
+	}
+
+	&.spinner-right {
+		&:before {
+			left: auto;
+		}
+	}
+}
+
+@mixin spinner-theme($color, $important: false) {
+	&:before {
+    	border-color: $color valueif($important, !important, null);
+		border-right-color: transparent;
+    }
+}

@@ -1,0 +1,148 @@
+section#page-content #controls #btnExport {
+  min-height: 38px;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: #003399;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search input {
+  height: 100%;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-placeholder {
+  font-size: 1rem;
+  color: #003399;
+  font-weight: bold;
+}
+section#page-content #controls #btnExport .ant-select:not(.ant-select-customize-input) .ant-select-arrow {
+  color: #003399;
+}
+section#page-content .ant-table .ant-table-thead tr th {
+  min-width: 120px;
+}
+section#page-content .ant-table .ant-table-thead tr th:first-child {
+  min-width: auto;
+}
+
+.ant-input-group.ant-input-group-compact > *:first-child, .ant-input-group.ant-input-group-compact > .ant-select:first-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-select-auto-complete:first-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:first-child .ant-input {
+  width: 50% !important;
+  height: 36px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  border: 1px solid #A7A5A5 !important;
+  border-right: none !important;
+  z-index: 0 !important;
+}
+
+.ant-input-group.ant-input-group-compact > *:last-child, .ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector, .ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input, .ant-input-group.ant-input-group-compact > .ant-cascader-picker-focused:last-child .ant-input {
+  width: 50% !important;
+  height: 36px !important;
+  border-right-width: 1px;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border: 1px solid #A7A5A5 !important;
+  border-left: none !important;
+  z-index: 0 !important;
+  position: absolute !important;
+}
+
+.btn-tab-1 {
+  width: 180px !important;
+  color: #A7A5A5 !important;
+  background-color: #EEEEEE !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn-tab-2 {
+  width: 180px !important;
+  position: absolute;
+  left: 160px;
+}
+
+.ant-modal-body {
+  padding: 24px !important;
+}
+
+.ant-transfer-list-content-item {
+  margin: 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 2px 5px 2px rgba(50, 50, 50, 0.1);
+  box-shadow: 1px 2px 5px 2px rgba(50, 50, 50, 0.1);
+}
+
+.fa-plus-square {
+  font-size: 17px !important;
+  color: #003399 !important;
+}
+
+.fa-minus-square {
+  font-size: 17px !important;
+  color: #FF6E00 !important;
+}
+
+.ant-form-item .ant-select, .ant-form-item .ant-cascader-picker {
+  width: 250px !important;
+}
+
+.breadcrumb {
+  background-color: #FFFFFF !important;
+  padding-left: 0px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #7E8299;
+  content: ">" !important;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active {
+  border-bottom-color: #fff;
+  background-color: #003399 !important;
+  color: #FFFFFF !important;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab, .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+  border-radius: 20px !important;
+  height: 40px;
+  width: 150px;
+  display: block;
+  text-align: center;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #FFFFFF !important;
+  text-shadow: 0 0 0.25px currentColor;
+  font-weight: bold;
+  padding-top: 2px;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab, .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 2px;
+  position: absolute;
+  left: 116px;
+  z-index: -1;
+  background-color: #EEEEEE;
+  color: #A7A5A5;
+  font-weight: bold;
+  padding-top: 9px;
+}
+
+.ant-tabs-tab-active {
+  z-index: 2 !important;
+  padding-top: 6px !important;
+}
+
+.ant-tabs-tab-inactive {
+  font-weight: bold !important;
+  color: #A7A5A5 !important;
+  background-color: #EEEEEE !important;
+  padding-top: 6px !important;
+}
+
+.ant-tabs-tab :hover {
+  color: #003399;
+}
+
+.ant-tabs-tab :focus {
+  color: #003399;
+}

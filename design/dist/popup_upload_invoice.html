@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="">
+<meta charset="utf-8" />
+<title>BBL Live preview | BBL Procure 2 Pay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="assets/css/pages/popup_upload_invoice/popup_upload_invoice.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+</head>
+
+<body id="bbl_body" class="header-mobile-fixed header-bottom-enabled page-loading">
+<div id="bbl_header_mobile" class="header-mobile bg-primary header-mobile-fixed"> <a href="index.html"> <img alt="Logo" src="assets/media/logos/bbl-logos.png" class="max-h-30px" /> </a>
+  <div class="d-flex align-items-center">
+    <button class="btn p-0 burger-icon burger-icon-left ml-4" id="bbl_header_mobile_toggle"> <span></span> </button>
+    <button class="btn p-0 ml-2" id="bbl_header_mobile_topbar_toggle"> <span class="svg-icon svg-icon-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+            viewBox="0 0 24 24" version="1.1">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon points="0 0 24 0 24 24 0 24" />
+        <path
+                d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
+                fill="#000000" fill-rule="nonzero" opacity="0.3" />
+        <path
+                d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"
+                fill="#000000" fill-rule="nonzero" />
+      </g>
+    </svg>
+    </span> </button>
+  </div>
+</div>
+<div class="d-flex flex-column flex-root">
+  <div class="d-flex flex-row flex-column-fluid page">
+    <div class="d-flex flex-column flex-row-fluid wrapper" id="bbl_wrapper">
+      <div id="bbl_header" class="header flex-column header-fixed">
+        <div class="header-top">
+          <div class="container">
+            <div class="d-none d-lg-flex align-items-center mr-3 justify-content-between"> <a href="index.html" class="mr-20"> <img alt="Logo" src="assets/media/logos/bbl-logos.png" class="max-h-35px" /> </a> </div>
+            <div class="topbar bg-primary">
+              <ul class="header-tabs nav align-self-end font-size-lg" role="tablist">
+                <li class="nav-item"> <a href="#" class="nav-link py-4 px-6 active" data-toggle="tab" data-target="#bbl_header_tab_1"
+                      role="tab">Dashboard</a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6" data-toggle="tab" data-target="#bbl_header_tab_2"
+                      role="tab">Document </a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6" data-toggle="tab" data-target="#bbl_header_tab_3"
+                      role="tab">Matching </a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6" data-toggle="tab" data-target="#bbl_header_tab_4"
+                      role="tab">Approval </a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6" data-toggle="tab" data-target="#bbl_header_tab_5"
+                      role="tab">Monitoring </a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6 active" data-toggle="tab" data-target="#bbl_header_tab_6"
+                      role="tab">Profile</a> </li>
+                <li class="nav-item mr-3"> <a href="#" class="nav-link py-4 px-6" data-toggle="tab" data-target="#bbl_header_tab_7"
+                      role="tab">Report</a> </li>
+              </ul>
+              <div class="dropdown">
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                  <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-white"> <i class="fal fa-bell icon-xl"></i> <span class="label label-dot label-xl label-warning"></span> <span class="pulse-ring"></span> </div>
+                </div>
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
+                  <form>
+                    <div class="navi navi-hover scroll my-4" data-scroll="true" data-height="300"
+                        data-mobile-height="200"> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-line-chart text-success"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New report has been received </div>
+                          <div class="text-muted">23 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-paper-plane text-danger"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">Finance report has been
+                            generated</div>
+                          <div class="text-muted">25 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-user flaticon2-line- text-success"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New order has been received </div>
+                          <div class="text-muted">2 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-pin text-primary"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New customer is registered </div>
+                          <div class="text-muted">3 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-sms text-danger"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">Application has been approved </div>
+                          <div class="text-muted">3 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-pie-chart-3 text-warning"></i> </div>
+                        <div class="navinavinavi-text">
+                          <div class="font-weight-bold">New file has been uploaded </div>
+                          <div class="text-muted">5 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon-pie-chart-1 text-info"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New user feedback received </div>
+                          <div class="text-muted">8 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-settings text-success"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">System reboot has been
+                            successfully completed</div>
+                          <div class="text-muted">12 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon-safe-shield-protection text-primary"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New order has been placed </div>
+                          <div class="text-muted">15 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-notification text-primary"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">Company meeting canceled</div>
+                          <div class="text-muted">19 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-fax text-success"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New report has been received </div>
+                          <div class="text-muted">23 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon-download-1 text-danger"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">Finance report has been
+                            generated</div>
+                          <div class="text-muted">25 hrs ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon-security text-warning"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New customer comment recieved </div>
+                          <div class="text-muted">2 days ago</div>
+                        </div>
+                      </div>
+                      </a> <a href="#" class="navi-item">
+                      <div class="navi-link">
+                        <div class="navi-icon mr-2"> <i class="flaticon2-analytics-1 text-success"></i> </div>
+                        <div class="navi-text">
+                          <div class="font-weight-bold">New customer is registered </div>
+                          <div class="text-muted">3 days ago</div>
+                        </div>
+                      </div>
+                      </a> </div>
+                  </form>
+                </div>
+              </div>
+              <div class="topbar-item">
+                <div class="btn btn-icon btn-hover-transparent-white w-sm-auto d-flex align-items-center btn-lg px-2"
+                    id="bbl_quick_user_toggle">
+                  <div class="d-flex flex-column text-right pr-sm-3"> <span class="text-white opacity-50 font-weight-bold font-size-sm d-none d-sm-inline">จงรักษ์
+                    กรุงเทพ</span> <span class="text-white font-weight-bolder font-size-sm d-none d-sm-inline">บริษัท
+                    โตโยต้า ลีสซิ่ง (ประเทศไทย) จำกัด</span> </div>
+                  <span class="symbol symbol-35">
+                  <div class="symbol-label bg-white-o-30"
+                        style="background-image: url('assets/media/users/300_21.jpg')"></div>
+                  </span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="header-navs header-navs-left" id="bbl_header_navs">
+              <ul class="header-tabs p-5 p-lg-0 d-flex d-lg-none nav nav-bold nav-tabs" role="tablist">
+                <li class="nav-item mr-2"> <a href="#" class="nav-link btn btn-clean active" data-toggle="tab" data-target="#bbl_header_tab_1"
+                      role="tab">Home</a> </li>
+                <li class="nav-item mr-2"> <a href="#" class="nav-link btn btn-clean" data-toggle="tab" data-target="#bbl_header_tab_2"
+                      role="tab">Reports</a> </li>
+                <li class="nav-item mr-2"> <a href="#" class="nav-link btn btn-clean" data-toggle="tab" data-target="#bbl_header_tab_3"
+                      role="tab">Orders</a> </li>
+                <li class="nav-item mr-2"> <a href="#" class="nav-link btn btn-clean" data-toggle="tab" data-target="#bbl_header_tab_2"
+                      role="tab">Help Ceter</a> </li>
+              </ul>
+              <div class="tab-content p-4">
+                <div class="tab-pane py-5 p-lg-0 show active" id="bbl_header_tab_1">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Dashboard</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane py-5 p-lg-0 show" id="bbl_header_tab_2">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Purchase Order</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Good Receipt</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Invoice</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Debit Note</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Credit Note</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane py-5 p-lg-0 show" id="bbl_header_tab_3">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">3 Ways Matching</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane py-5 p-lg-0 show" id="bbl_header_tab_4">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting PO Approval</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting GR Approval</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting Invocie Approval</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting Debit Approval</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting Credit Approval</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Waiting Payment Approval</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane py-5 p-lg-0 show" id="bbl_header_tab_5">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Upload Invoice Monitoring</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-pane p-5 p-lg-0 justify-content-between" id="bbl_header_tab_6">
+                  <div class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+                    <div class="fullwidth-submenu d-flex flex-wrap">
+                      <div class="col menu-blog text-left active">
+                        <p class="menu-blog-title white bold py-2 px-5 mb-0">Bank Profile </p>
+                        <hr size="0" class="border-white col-4 px-0 mx-0 mb-7" />
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text active">Create Bank
+                          Profile</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Bank Profile
+                          Lists</a></p>
+                      </div>
+                      <div class="col menu-blog text-left">
+                        <p class="menu-blog-title white bold py-2 px-5 mb-0">Buyer Profile </p>
+                        <hr size="0" class="border-white col-4 px-0 mx-0 mb-7" />
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Create Buyer
+                          Profile</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Buyer Profile
+                          Lists</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Buyer Profile
+                          Approval Info</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Partnership</a></p>
+                      </div>
+                      <div class="col menu-blog text-left">
+                        <p class="menu-blog-title white bold py-2 px-5 mb-0">Supplier
+                          Profile</p>
+                        <hr size="0" class="border-white col-4 px-0 mx-0 mb-7" />
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Create Supplier
+                          Profile</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Supplier Profile
+                          Lists</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Supplier Profile
+                          Approval Info</a> </p>
+                      </div>
+                      <div class="col menu-blog text-left">
+                        <p class="menu-blog-title white bold py-2 px-5 mb-0">Reference Info </p>
+                        <hr size="0" class="border-white col-4 px-0 mx-0 mb-7" />
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Mapping Reference
+                          Info</a></p>
+                      </div>
+                      <div class="col menu-blog text-left">
+                        <p class="menu-blog-title white bold py-2 px-5 mb-0">User Profile </p>
+                        <hr size="0" class="border-white col-4 px-0 mx-0 mb-7" />
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">Create User
+                          Profile</a></p>
+                        <p class="pb-3 mb-2"><a href="javascript:void(0);" class="w-100 btn-text">User Profile
+                          Lists</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane py-5 p-lg-0 show" id="bbl_header_tab_7">
+                  <div id="bbl_header_menu"
+                      class="header-menu header-menu-mobile header-menu-layout-default col-12 flex-wrap">
+                    <ul class="menu-nav">
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Funds Management</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Payment</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Disbursement</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Credit Care Incentive</span> </a> </li>
+                      <li class="menu-item" aria-haspopup="true"> <a href="index.html" class="menu-link"> <span class="menu-text">Supply Chain Financing</span> </a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content d-flex flex-column flex-column-fluid" id="bbl_content">
+        <div class="d-flex flex-column-fluid">
+          <div class="container">
+           
+            
+			  <!------------
+				Start Popup Upload On Process.
+				------------>
+            <div>
+              <div class="ant-popover ant-popconfirm ant-popover-placement-top " style="left: 600px; top: 300px; transform-origin: 50% 104px;">
+                <div class="ant-popover-content" style="width: 500px">
+                  <div class="ant-popover-inner" role="tooltip">
+                    <div class="ant-popover-inner-content">
+                      <div class="ant-layout-header"></div>
+						<div class="ant-progress-inner mt-10" style="width: 100px; height: 100px; font-size: 24px;"><svg class="ant-progress-circle" viewBox="0 0 100 100"><path class="ant-progress-circle-trail" d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94" stroke-linecap="round" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.31px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s, stroke-width 0.06s ease 0.3s, opacity 0.3s ease 0s;"></path><path class="ant-progress-circle-path" d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94" stroke="" stroke-linecap="round" stroke-width="6" opacity="1" fill-opacity="0" style="stroke-dasharray: 221.482px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s, stroke-width 0.06s ease 0.3s, opacity ease 0s;"></path><path class="ant-progress-circle-path" d="M 50,50 m 0,-47
+   a 47,47 0 1 1 0,94
+   a 47,47 0 1 1 0,-94" stroke="" stroke-linecap="round" stroke-width="6" opacity="0" fill-opacity="0" style="stroke: rgb(82, 196, 26); stroke-dasharray: 0px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s, stroke-width 0.06s ease 0.3s, opacity ease 0s;"></path></svg><span class="ant-progress-text" title="75 Days">75 Days</span></div>
+                      <div class="justify-content-md-center mt-10 my-10"><p>Upload On Process.</p>
+						<p>Monitor the status of your invoice on monitoring menu. </p></div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------
+				END Popup Upload On Process.
+				------------>
+          </div>
+        </div>
+      </div>
+      <footer class="bg-blue">
+        <div class="container py-4">
+          <div class="d-flex flex-wrap align-items-center">
+            <div class="col-1 px-0"> <img src="assets/media/logos/bbl-logos.png" alt="" class="img-fullwidth" /> </div>
+            <div class="col px-4">
+              <p class="small white mb-0">สงวนลิขสิทธิ์ พ.ศ.2561 บมจ.ธนาคารกรุงเทพ</p>
+              <p class="small white mb-0">เว็บไซต์ธนาคารกรุงเทพ ใช้งานได้ดีบนบราวเซอร์ Google Chrome,
+                Firefox, Safari และ Internet Explorer เวอร์ชัน 11 ขึ้นไป</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div id="bbl_quick_user" class="offcanvas offcanvas-right p-10">
+  <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
+    <h3 class="font-weight-bold m-0">User Profile</h3>
+    <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="bbl_quick_user_close"> <i class="ki ki-close icon-xs text-muted"></i> </a> </div>
+  <div class="offcanvas-content pr-5 mr-n5">
+    <div class="d-flex align-items-center mt-5">
+      <div class="symbol symbol-70 mr-5">
+        <div class="symbol-label" style="background-image:url('assets/media/users/300_21.jpg')"></div>
+        <i class="symbol-badge bg-success"></i> </div>
+      <div class="d-flex flex-column"> <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">จงรักษ์
+        กรุงเทพ</a>
+        <div class="text-muted mt-1">บริษัท โตโยต้า ลีสซิ่ง (ประเทศไทย) จำกัด</div>
+        <div class="navi mt-2"> <a href="login.html" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign
+          Out</a> </div>
+      </div>
+    </div>
+    <div class="separator separator-dashed mt-8 mb-5"></div>
+  </div>
+</div>
+<script src="assets/plugins/global/plugins.bundle.js"></script>
+<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+<script src="assets/js/scripts.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+{
+    "title": "PO List",
+    "children": [
+      {
+        "containerType": "Tabs",
+        "children": [
+          {
+            "title": "Search",
+            "showBoxSearch": "5",
+            "children": [
+              {
+                "containerName": "SearchBox",
+                "containerType": "Row",
+                "children": [
+                    {
+                        "containerName": "SearchField",
+                        "containerType": "Column",
+                        "className" : "css name",
+                        "children": [
+                            {
+                                "input": "Text",
+                                "label": "Quote No.",
+                                "containerType": "Row",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              },
+                              {
+                                "input": "Text",
+                                "label": "Customer name",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              },
+                              {
+                                "input": "Text",
+                                "label": "Vin No.",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              },
+                              {
+                                "input": "Date",
+                                "label": "Playable approcal date",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              },
+                              {
+                                "input": "Text",
+                                "label": "AO Name",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              },
+                              {
+                                "input": "Text",
+                                "label": "Car Model",
+                                "validate": {
+                                  "maxLength": "50",
+                                  "minLength": "10",
+                                  "required": "false"
+                                }
+                              }
+                        ]
+
+                    },
+                    {
+                        "containerName": "Button",
+                        "containerType": "Column",
+                        "className" : "css name",
+                        "children": [
+                            {
+                                "label": "Search",
+                                "type": "Button",
+                                "action": "search",
+                                "className" : "css name"
+                            },
+                            {
+                                "label": "Clear",
+                                "type": "Button",
+                                "action": "clear",
+                                "className" : "css name"
+                            },
+                            {
+                                "label": "More Search",
+                                "type": "Button",
+                                "action": "expand",
+                                "className" : "css name"
+                            }
+                            
+                        ]
+
+                    }
+
+                  
+                ]
+              }
+            ]
+          },
+          {
+            "containerType": "Table",
+            "children": [
+              {
+                "label": "Quote No.",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "true"
+                  }
+                ]
+              },
+              {
+                "label": "Playable approcal date",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Name",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Car Model",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Vin No.",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Regis No.",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Status",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "Remaining",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              },
+              {
+                "label": "AO Name",
+                "options": [
+                  {
+                    "sort": "true",
+                    "click": "false"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

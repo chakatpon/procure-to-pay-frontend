@@ -1,0 +1,275 @@
+{
+  "title": "Payment Reference List",
+  "icon": null,
+  "breadcrumb": [
+    {
+      "label": "Monitoring",
+      "href": ""
+    },
+    {
+      "label": "iCash",
+      "href": ""
+    },
+    {
+      "label": "Payment Reference List",
+      "href": "/monitor/iCash/PaymentReferenceList"
+    }
+  ],
+  "export": [
+    {
+      "icon": "<span class=\"bbl-file-csv\"><span class=\"path1\"></span><span class=\"path2\"></span><span class=\"path3\"></span><span class=\"path4\"></span><span class=\"path5\"></span><span class=\"path6\"></span><span class=\"path7\"></span><span class=\"path8\"></span><span class=\"path9\"></span><span class=\"path10\"></span></span>",
+      "label": "CSV",
+      "seq": 2,
+      "exportApi": "/p2p/api/v1/export/icashMonitoring/paymentReference/csv",
+      "fileName": "fileName.csv"
+    }
+  ],
+  "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+  "search": [
+    {
+      "searchKey": "buyerCode",
+      "searchLabel": "Buyer Code",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 1
+    },
+    {
+      "searchKey": "buyerName",
+      "searchLabel": "Buyer Name",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 2
+    },
+    {
+      "searchKey": "customerBatchReference",
+      "searchLabel": "Customer Batch Reference",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 3
+    },
+    {
+      "searchKey": "paymentReference",
+      "searchLabel": "Payment Refrence",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 4
+    },
+    {
+      "searchKey": "paymentDate",
+      "searchLabel": "Payment Date",
+      "searchPlaceholder": null,
+      "searchInputType": "daterangepicker",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 5
+    },
+    {
+      "searchKey": "productService",
+      "searchLabel": "Product Service",
+      "searchPlaceholder": null,
+      "searchInputType": "select",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": [
+        {
+          "option": "ALL",
+          "value": ""
+        }
+      ],
+      "searchSeq": 6
+    },
+    {
+      "searchKey": "debitAccountNo",
+      "searchLabel": "Debit Account No.",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 7
+    },
+    {
+      "searchKey": "beneficiaryAccountNo",
+      "searchLabel": "Beneficiary Account No.",
+      "searchPlaceholder": null,
+      "searchInputType": "text",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": null,
+      "searchSeq": 8
+    },
+    {
+      "searchKey": "paymentResult",
+      "searchLabel": "Payment Result",
+      "searchPlaceholder": null,
+      "searchInputType": "select",
+      "searchInputDefaultValue": null,
+      "searchInputRule": null,
+      "searchApi": "/p2p/api/v1/inquiry/icashMonitoring/paymentReference",
+      "searchInputSearchable": true,
+      "searchVisibility": true,
+      "searchDefaultDisplay": true,
+      "searchOptions": [
+        {
+          "option": "ALL",
+          "value": ""
+        }
+      ],
+      "searchSeq": 9
+    }
+  ],
+  "table": {
+    "limitOptions": [
+      10,
+      20,
+      50
+    ],
+    "defaultLimit": 10,
+    "tableClass": "",
+    "columns": [
+      {
+        "columnName": "Buyer Code",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "buyerCode",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": true,
+        "columnSeq": 1,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Buyer Name (EN)",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "buyerNameEN",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 2,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Payment Refrence",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "paymentReference",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 3,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Payment Date",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "paymentDate",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 4,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Product Service",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "productService",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 5,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Debit Account No.",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "debitAccountNo",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 6,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Beneficiary Account No.",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "beneficiaryAccountNo",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 7,
+        "columnLink": null,
+        "columnDisplay": true
+      },
+      {
+        "columnName": "Payment Result",
+        "columnType": "text",
+        "columnClass": "",
+        "columnFieldName": "paymentResult",
+        "columnSorting": true,
+        "columnIcon": "icon",
+        "columnDefault": false,
+        "columnSeq": 8,
+        "columnLink": null,
+        "columnDisplay": true
+      }
+    ],
+    "multipleSelect": false,
+    "tableHeaderAction": null
+  }
+}

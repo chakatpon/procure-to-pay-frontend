@@ -1,0 +1,179 @@
+.ant-input {
+  border: 1px solid #A7A5A5;
+  border-radius: 20px !important;
+  height: 36px;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 20px;
+  border: 1px solid #A7A5A5;
+  height: 36px;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  padding: 6px 0 8px 2px;
+  margin-left: -2px;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+
+.ant-table {
+  -webkit-box-shadow: 2px 3px 8px #D3D3D3 !important;
+  box-shadow: 2px 3px 8px #D3D3D3 !important;
+  border-radius: 10px !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #3269CD !important;
+  color: #FFFFFF !important;
+}
+
+.ant-table-container table > thead > tr:first-child th:first-child {
+  border-top-left-radius: 10px !important;
+}
+
+.ant-table-container table > thead > tr:first-child th:last-child {
+  border-top-right-radius: 10px !important;
+}
+
+.ant-pagination-item-active {
+  font-weight: 500 !important;
+  background: #3269CD !important;
+  border-color: #3269CD !important;
+  border-radius: 20px !important;
+  color: #FFFFFF !important;
+}
+
+.ant-pagination-item {
+  border: none !important;
+}
+
+.ant-pagination-item {
+  margin-right: 0px !important;
+}
+
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+  border: none !important;
+}
+
+.breadcrumb-bold {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.breadcrumb-mapping {
+  background-color: #FFFFFF !important;
+  padding: 0.75rem 0rem 0rem 0rem !important;
+}
+
+.breadcrumb-bg {
+  background-color: #F7F7F7;
+  border-radius: 0px !important;
+}
+
+.badge {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+.badge-person {
+  background-color: #A7A5A5 !important;
+  color: #FFFFFF;
+  border: 1px #A7A5A5 !important;
+}
+
+.ant-upload-list-text .ant-upload-list-item-name, .ant-upload-list-picture .ant-upload-list-item-name {
+  padding: 0px !important;
+}
+
+.ant-select-selector {
+  border-radius: 20px !important;
+}
+
+.btn-submit {
+  width: 120px !important;
+  height: 36px !important;
+  color: #FFFFFF !important;
+  background-color: #003399 !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+}
+
+.btn-back {
+  width: 120px !important;
+  height: 36px !important;
+  margin-left: 5px !important;
+  border-radius: 20px !important;
+  border: 1px solid #3269CD !important;
+  color: #3269CD !important;
+  font-weight: bold !important;
+}
+
+.btn-back:hover {
+  color: #3269CD !important;
+}
+
+.btn-back:focus {
+  color: #3269CD !important;
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+  position: relative;
+  padding: 10px 16px 10px 16px !important;
+  overflow-wrap: break-word;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: #EEEEEE;
+}
+
+.ant-descriptions-item-label {
+  font-weight: bold !important;
+}
+
+.ant-table .ant-table-tbody tr td:first-child {
+  padding: 0.25rem 16px;
+  -webkit-border-top-left-radius: 0px !important;
+  -webkit-border-bottom-left-radius: 0px !important;
+  -moz-border-radius-topleft: 0px !important;
+  -moz-border-radius-bottomleft: 0px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.ant-table .ant-table-tbody tr td:last-child {
+  -webkit-border-top-right-radius: 0px !important;
+  -webkit-border-bottom-right-radius: 0px !important;
+  -moz-border-radius-topright: 0px !important;
+  -moz-border-radius-bottomright: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.ant-table .ant-table-tbody tr:nth-child(even) td {
+  background-color: #FFFFFF !important;
+}
+
+.btn-blue-transparent {
+  margin-left: 10px;
+}
+
+.ant-modal-header {
+  padding: 16px 24px;
+  color: rgba(0, 0, 0, 0.85);
+  background: #003399 !important;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.ant-modal-footer {
+  padding: 10px 16px;
+  text-align: right;
+  background: transparent;
+  border-top: 1px solid #f0f0f0;
+  border-radius: 0 0 10px 10px !important;
+}

@@ -1,0 +1,98 @@
+.header-bbl {
+  font-size: 16px;
+  color: #333333;
+	font-weight: bold;
+}
+
+.border-radius-left {
+  -webkit-border-radius: 20px 0 0 20px
+}
+
+.border-radius-right {
+  -webkit-border-radius: 0 20px 20px 0
+}
+
+.ant-card {
+  border-radius: 20px !important;
+}
+
+.ant-table {
+  -webkit-box-shadow: 2px 3px 8px #D3D3D3 !important;
+  box-shadow: 2px 3px 8px #D3D3D3 !important;
+  border-radius: 10px !important;
+}
+.ant-table-thead > tr > th {
+  background: #3269CD !important;
+  color: #FFFFFF !important;
+}
+.ant-table-container table > thead > tr:first-child th:first-child {
+  border-top-left-radius: 10px !important;
+}
+.ant-table-container table > thead > tr:first-child th:last-child {
+  border-top-right-radius: 10px !important;
+}
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td {
+  position: relative;
+  padding: 10px 16px 10px 16px !important;
+  overflow-wrap: break-word;
+}
+.ant-table .ant-table-thead tr th {
+  background: none;
+  font-weight: bold !important;
+  font-size: 14px;
+  line-height: 24px;
+  color: #003399;
+  padding: 0.25rem 0.5rem;
+  vertical-align: top;
+}
+.ant-table .ant-table-tbody tr:nth-child(even) td {
+  background-color: #E6EDF9 !important;
+}
+#bbl_content .ant-table .ant-table-tbody tr:nth-child(odd) td {
+  background-color: #FFFFFF !important;
+}
+.ant-table .ant-table-tbody tr td:first-child {
+  padding: 0.25rem 16px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 13px !important;
+  border-bottom-left-radius: 13px !important;
+}
+.ant-table .ant-table-tbody tr td:last-child {
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-top-right-radius: 13px !important;
+  border-bottom-right-radius: 13px !important;
+}
+
+.search {
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 20px;
+  width: 25%;
+  height: 40px;
+}
+
+.input-search {
+  width: 88%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.line-blue {
+  width: 100%;
+  height: 1px;
+  background-color: #003399;
+}
+.rcorners {
+  border-radius: 20px;
+  background: #EEEEEE;
+  padding: 20px 0px 15px 0px;
+  width: auto;
+}
